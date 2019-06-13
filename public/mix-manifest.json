@@ -1,0 +1,14 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/welcome/internship_left.css": "/css/welcome/internship_left.css",
+    "/css/welcome/internship_right.css": "/css/welcome/internship_right.css",
+    "/css/welcome/_main_welcome.css": "/css/welcome/_main_welcome.css",
+    "/css/_navbar_back.css": "/css/_navbar_back.css",
+    "/css/information/_profile.css": "/css/information/_profile.css",
+    "/css/information/profile_left.css": "/css/information/profile_left.css",
+    "/css/information/profile_right.css": "/css/information/profile_right.css",
+    "/css/tasks/_tasks.css": "/css/tasks/_tasks.css",
+    "/css/tasks/tasks_left.css": "/css/tasks/tasks_left.css",
+    "/css/tasks/tasks_right.css": "/css/tasks/tasks_right.css",
+    "/css/information/edit_profile.css": "/css/information/edit_profile.css"
+}

@@ -1,0 +1,115 @@
+body {
+  font-family: -webkit-body;
+  background: #89d2de63;
+}
+
+/*start the profile.php syle*/
+
+.navbar {
+  background: #117a8b;
+}
+
+.navbar > ul:first-of-type {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar ul:first-of-type li {
+  font-size: 18px;
+  padding: 5px 15px;
+  text-transform: capitalize;
+  margin-top: 2px;
+}
+
+.navbar ul:first-of-type li a {
+  color: white;
+}
+
+.navbar .container .list {
+  float: right;
+}
+
+.navbar .container .list ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar .container .list ul li {
+  float: left;
+  position: relative;
+  font-size: 18px;
+  padding: 5px 10px;
+  text-transform: capitalize;
+  margin-top: 2px;
+}
+
+.navbar .list ul li a {
+  text-decoration: none;
+}
+
+.navbar .list .dropdown .dropdown-item {
+  color: black;
+}
+
+.navbar .list .dropdown .btn_custom {
+  background: none;
+  border: none;
+  padding: 0px;
+  text-transform: capitalize;
+  color: ghostwhite;
+  letter-spacing: 1px;
+  outline: none;
+  cursor: pointer;
+}
+
+.edit {
+  padding: 50px;
+}
+
+.edit h3 {
+  font-family: cursive;
+  padding-bottom: 20px;
+}
+
+.edit .row {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.edit .row form .form-group {
+  max-height: 77px;
+  min-height: 77px;
+  height: 77px;
+}
+
+.edit .row form textarea {
+  height: 50px;
+  resize: none;
+  min-height: 80px;
+  max-height: 100px;
+}
+
+.edit .row form input {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.edit .row form input[type=password] {
+  font-size: 15px;
+  text-transform: none;
+  font-family: 100;
+}
+
+.edit .row form .button {
+  position: absolute;
+  bottom: -80px;
+  margin-left: 44%;
+  width: 100px;
+}
+
+.edit .row form .button button {
+  width: 100%;
+}
+

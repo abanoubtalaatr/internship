@@ -1,0 +1,65 @@
+body {
+  font-family: -webkit-body;
+  background: #89d2de63;
+}
+
+/*start the profile.php syle*/
+
+.navbar {
+  background: #117a8b;
+}
+
+.navbar > ul:first-of-type {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar ul:first-of-type li {
+  font-size: 18px;
+  padding: 5px 15px;
+  text-transform: capitalize;
+  margin-top: 2px;
+}
+
+.navbar ul:first-of-type li a {
+  color: white;
+}
+
+.navbar .container .list {
+  float: right;
+}
+
+.navbar .container .list ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar .container .list ul li {
+  float: left;
+  position: relative;
+  font-size: 18px;
+  padding: 5px 10px;
+  text-transform: capitalize;
+  margin-top: 2px;
+}
+
+.navbar .list ul li a {
+  text-decoration: none;
+}
+
+.navbar .list .dropdown .dropdown-item {
+  color: black;
+}
+
+.navbar .list .dropdown .btn_custom {
+  background: none;
+  border: none;
+  padding: 0px;
+  text-transform: capitalize;
+  color: ghostwhite;
+  letter-spacing: 1px;
+  outline: none;
+  cursor: pointer;
+}
+

@@ -1,0 +1,206 @@
+body {
+  font-family: -webkit-body;
+  background: #89d2de63;
+}
+
+/*start the profile.php syle*/
+
+.navbar {
+  background: #117a8b;
+}
+
+.navbar > ul:first-of-type {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar ul:first-of-type li {
+  font-size: 18px;
+  padding: 5px 15px;
+  text-transform: capitalize;
+  margin-top: 2px;
+}
+
+.navbar ul:first-of-type li a {
+  color: white;
+}
+
+.navbar .container .list {
+  float: right;
+}
+
+.navbar .container .list ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar .container .list ul li {
+  float: left;
+  position: relative;
+  font-size: 18px;
+  padding: 5px 10px;
+  text-transform: capitalize;
+  margin-top: 2px;
+}
+
+.navbar .list ul li a {
+  text-decoration: none;
+}
+
+.navbar .list .dropdown .dropdown-item {
+  color: black;
+}
+
+.navbar .list .dropdown .btn_custom {
+  background: none;
+  border: none;
+  padding: 0px;
+  text-transform: capitalize;
+  color: ghostwhite;
+  letter-spacing: 1px;
+  outline: none;
+  cursor: pointer;
+}
+
+.custom_profile .row {
+  border: 1px dashed black;
+  padding: 20px 0px;
+  margin-top: 20px;
+  border-top: 5px solid #0055d9;
+  background: #f7f9ff;
+}
+
+.custom_profile .row .profile {
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.custom_profile .row .profile h3 {
+  text-transform: capitalize;
+  font-family: -webkit-body;
+  letter-spacing: 2px;
+  font-weight: initial;
+  text-shadow: 2px -2px;
+  border-bottom: 1px dashed;
+  padding: 16px 2px;
+}
+
+.custom_profile .row .profile .profile_image {
+  padding-top: 40px;
+}
+
+.custom_profile .row .profile .profile_image .image img {
+  height: 250px;
+}
+
+.custom_profile .row .profile .profile_image .editing_image {
+  padding-top: 18px;
+  padding-left: 0px;
+}
+
+.custom_profile .row .profile .profile_image .editing_image form {
+  width: 50%;
+}
+
+.custom_profile .row .profile .profile_image .editing_image form .contain_file_btn {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom_profile .row .profile .profile_image .editing_image form .contain_file_btn .change_image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.custom_profile .row .profile .profile_image .editing_image form .contain_file_btn input[type=file] {
+  position: absolute;
+  z-index: 3;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.custom_profile .row .profile .profile_image .editing_image form .save {
+  width: 35%;
+  position: absolute;
+  right: 15px;
+  bottom: 54px;
+}
+
+.custom_profile .row .profile .profile_info {
+  padding-top: 15px;
+}
+
+.custom_profile .row .profile .profile_info .alert-primary,
+.custom_profile .row .profile .profile_info .alert-warning {
+  padding: 2px 5px;
+}
+
+.custom_profile .row .profile .profile_info h4 {
+  text-transform: capitalize;
+  font-family: -webkit-body;
+  font-size: 18px;
+  border-bottom: 1px dashed;
+  padding-bottom: 16px;
+  padding-top: 5px;
+}
+
+.custom_profile .row .profile .profile_info .skills span {
+  margin-right: 4px;
+  background: #e6efff;
+  padding: 4px 9px;
+  border-radius: 3px;
+  display: inline-block;
+  padding-bottom: 3px;
+  margin-top: 4px;
+}
+
+.custom_profile .row .profile .profile_general {
+  padding-top: 15px;
+  overflow-y: scroll;
+  font-family: -webkit-body;
+  overflow: hidden;
+  text-align: start;
+}
+
+.custom_profile .row .profile .profile_general .alert-primary,
+.custom_profile .row .profile .profile_general .alert-warning {
+  padding: 2px 5px;
+}
+
+.custom_profile .row .profile .profile_general h4 {
+  font-size: 20px;
+}
+
+.custom_profile .row .profile .profile_social {
+  padding-top: 15px;
+}
+
+.custom_profile .row .profile .profile_social .alert-primary,
+.custom_profile .row .profile .profile_social .alert-warning {
+  padding: 2px 5px;
+}
+
+.custom_profile .row .profile .profile_social h4 {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.custom_profile .row .button {
+  margin: auto;
+  margin-top: 20px;
+}
+
+.custom_profile .row .button a {
+  color: black;
+}
+
+.profile > div {
+  float: right;
+}
+

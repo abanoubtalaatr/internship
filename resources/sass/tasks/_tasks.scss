@@ -1,0 +1,78 @@
+@import '../_navbar_back';
+
+.container .tasks .row {
+  overflow: hidden;
+  border-top: 3px solid #0055d9;
+  padding-top: 20px;
+  border-left: 1px dashed;
+  border-right: 1px dashed;
+  border-bottom: 1px dashed;
+  padding: 17px;
+  background: rgba(12, 222, 194, 0.94);
+  margin-bottom: 20px; }
+  .container .tasks .row h4 {
+    text-transform: capitalize; }
+  .container .tasks .row #start_task {
+    margin-top: 0px; }
+  .container .tasks .row .contain_span {
+    overflow: hidden; }
+    .container .tasks .row .contain_span span {
+      padding: 5px;
+      color: #001433;
+      background: #e6efff;
+      border-radius: 5px; }
+      .container .tasks .row .contain_span span:first-of-type {
+        text-transform: capitalize;
+        float: left; }
+        .container .tasks .row .contain_span span:first-of-type strong {
+          color: blue; }
+      .container .tasks .row .contain_span span:last-of-type {
+        float: right; }
+        .container .tasks .row .contain_span span:last-of-type strong {
+          text-transform: capitalize;
+          color: crimson; }
+  .container .tasks .row .description {
+    padding: 5px 0px;
+    background: white;
+    margin-top: 15px;
+    border-top: 3px solid; }
+    .container .tasks .row .description span {
+      color: darkblue;
+      margin-left: 23px;
+      font-size: 20px;
+      text-transform: capitalize;
+      padding: 11px 0px 6px 0px;
+      border-bottom: 1px solid;
+      display: inline-block; }
+    .container .tasks .row .description p {
+      padding: 10px 23px; }
+  .container .tasks .row .btn-primary {
+    margin-top: 40px;
+    width: 100px;
+    height: 33px;
+    overflow: hidden;
+    padding: 0px;
+    line-height: 2;
+    position: relative; }
+    .container .tasks .row .btn-primary input[type='file'] {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      bottom: 0px;
+      right: 0px;
+      left: 0px;
+      z-index: 2; }
+    .container .tasks .row .btn-primary span {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      line-height: 2.3;
+      right: 0;
+      bottom: 0px;
+      right: 0px;
+      left: 0px;
+      z-index: 1; }
+  .container .tasks .row .upload {
+    float: right; }
