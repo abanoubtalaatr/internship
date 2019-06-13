@@ -28,7 +28,17 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/profile';
+   
+   // protected $redirectTo = "/profile/";
+
+    protected function redirectTo()
+    {
+        $user = new User;
+        $user = $user::find(Auth::id())->get()->first();
+        $fullname = $user->first_name . '.'.$user->last_name . '.'.$user->id;
+         
+        return "/tasks";
+    }
 
     /**
      * Create a new controller instance.
@@ -36,7 +46,7 @@ class LoginController extends Controller
      * @return void
      */
     public function __construct(Request $request)
-    {
+    {  
         $this->middleware('guest')->except('logout');
     }//consturctor
 

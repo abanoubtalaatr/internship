@@ -45,7 +45,8 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: -webkit-body;
+background: #008b8b12;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -66,13 +67,14 @@ section {
 
 body {
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  /*font-family: "Nunito", sans-serif;*/
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
   color: #212529;
   text-align: left;
-  background-color: #f8fafc;
+  font-family: -webkit-body;
+  background: #008b8b12;
 }
 
 [tabindex="-1"]:focus {

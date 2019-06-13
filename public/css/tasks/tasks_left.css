@@ -1,6 +1,6 @@
 body {
   font-family: -webkit-body;
-  background: #89d2de63;
+  background: #008b8b12;
 }
 
 /*start the profile.php syle*/
@@ -63,6 +63,10 @@ body {
   cursor: pointer;
 }
 
+.container .tasks {
+  padding-top: 40px;
+}
+
 .container .tasks .row {
   overflow: hidden;
   border-top: 3px solid #0055d9;
@@ -75,6 +79,47 @@ body {
   margin-bottom: 20px;
 }
 
+.container .tasks .row .alert-primary {
+  width: 100%;
+  text-align: center;
+  color: brown;
+}
+
+.container .tasks .row .button {
+  width: 50%;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.container .tasks .row .button form {
+  width: 50%;
+}
+
+.container .tasks .row .button form:last-of-type {
+  float: right;
+}
+
+.container .tasks .row .button form:first-of-type {
+  float: left;
+}
+
+.container .tasks .row .button form button:first-of-type {
+  float: left;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.container .tasks .row .button form button:last-of-type {
+  float: right;
+}
+
+.container .tasks .row .button .btn-primary {
+  margin: 0px;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
+
 .container .tasks .row h4 {
   text-transform: capitalize;
 }
@@ -85,6 +130,7 @@ body {
 
 .container .tasks .row .contain_span {
   overflow: hidden;
+  padding: 0px;
 }
 
 .container .tasks .row .contain_span span {
@@ -113,7 +159,7 @@ body {
 }
 
 .container .tasks .row .description {
-  padding: 5px 0px;
+  padding: 6px 15px;
   background: white;
   margin-top: 15px;
   border-top: 3px solid;
@@ -138,7 +184,7 @@ body {
   width: 100px;
   height: 33px;
   overflow: hidden;
-  padding: 0px;
+  padding-bottom: 30px;
   line-height: 2;
   position: relative;
 }
@@ -167,7 +213,28 @@ body {
   z-index: 1;
 }
 
-.container .tasks .row .upload {
+.container .tasks .row .btn-primary .upload {
   float: right;
+}
+
+.container .tasks .row .row-2:last-of-type span:first-of-type {
+  display: block;
+  padding: 15px 0px;
+  float: left;
+}
+
+.container .tasks .row .row-2:last-of-type span:last-of-type {
+  float: right;
+  display: block;
+  padding: 12px;
+  font-size: 15px;
+  text-transform: capitalize;
+  background: burlywood;
+  padding: 2px 20px;
+  margin-top: 16px;
+  border-radius: 4px;
+  margin-left: 25px;
+  display: none;
+  cursor: pointer;
 }
 

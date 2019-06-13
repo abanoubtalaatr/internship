@@ -1,6 +1,7 @@
 html,
 body {
-  font-family: "Nunito", sans-serif;
+
+  font-family: -webkit-body;
   font-weight: 200;
   margin: 0;
   color: black;
@@ -8,6 +9,12 @@ body {
   -webkit-perspective: 600px;
   perspective: 600px;
 }
+
+.Contact-us{
+  width:auto !important;
+  top: -10px !important
+}
+
 
 .style_link,
 .navbar .container button,
@@ -95,7 +102,7 @@ body {
 }
 
 .container .intro {
-  background: black;
+  
   padding: 14px;
   margin-top: 48px;
   text-align: center;
@@ -120,27 +127,25 @@ body {
 .container .types .first,
 .container .types .second {
   border-radius: 5px;
-  background: white;
   padding: 23px 15px;
   font-size: 18px;
-  font-family: monospace;
+
 }
 
 .container .steps {
   padding: 17px 6px;
-  background: white;
+
+  
   border-radius: 8px;
 }
 
 .container .contact {
-  background: deepskyblue;
+
   padding: 23px 20px;
   border-radius: 11px;
 }
 
-.container .contact h5 {
-  color: white;
-}
+
 
 .container .contact a {
   text-decoration: none;

@@ -10,9 +10,10 @@ class EditController extends Controller
 
 	// this function to show page edit and send the information that would to update or edit
     public function show(){
+
+        
     	$users = new User;
-        $single_user = $users::find(session()->get('user_id'));
-        return view('information.edit',compact('single_user'));
+        return view('information.edit');
     	
     }//show 
 
@@ -20,10 +21,9 @@ class EditController extends Controller
     // this recevie the new date and update the old date with it
     public function update(Request $request){
 
-    	
-    	$users= User::find(session()->get('user_id'))->update($request->all());
-    	
-    	return redirect('/profile');
+        $user = new User;
+    	$users= User::find($user->CurrentUser()->id)->update($request->all());
+        return view('information.profile');
     	
     	
     }// this function to update the current information

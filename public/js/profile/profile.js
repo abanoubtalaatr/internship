@@ -11,7 +11,7 @@ real_image.src = URL.createObjectURL(event.target.files[0]);
 };
 
 // this for send the new image to controller ImageController to save it in data base
-button.onclick = function (evt){
+save_image.onclick = function (evt){
    evt.preventDefault();
 
 	if(file.value !==''){
@@ -27,7 +27,33 @@ button.onclick = function (evt){
 		  }//onchange
 		
 		let dataForm = new FormData(this.parentNode);
-		ajaxRequest.open('POST',"handle_image",true);
+		ajaxRequest.open('POST',"/image/update",true);
+		
+		ajaxRequest.send(dataForm);
+	
+	}//end if 
+	
+}// button to send photo
+
+
+// this for send the new image to controller ImageController to save it in data base
+save_imageTeamLeader.onclick = function (evt){
+   evt.preventDefault();
+
+	if(file.value !==''){
+		
+		ajaxRequest = new XMLHttpRequest();
+		ajaxRequest.onreadystatechange = function() {
+		  if(ajaxRequest.readyState == 4 && ajaxRequest.status == 200){
+		  	  if(ajaxRequest.response ==''){
+		  	    console.log('yes');  	
+		  	  } 
+				   		   
+			}// end if is set response
+		  }//onchange
+		
+		let dataForm = new FormData(this.parentNode);
+		ajaxRequest.open('POST',"/teamleader/EditImageTeamController/updateImageTeamLeader",true);
 		
 		ajaxRequest.send(dataForm);
 	

@@ -11,6 +11,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\App;
 
 
+
 class RegisterController extends Controller
 {
     /*
@@ -31,7 +32,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/profile';
+    protected $redirectTo = "/tesks";
 
     /**
      * Create a new controller instance.
@@ -56,6 +57,7 @@ class RegisterController extends Controller
             'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'start_point' =>['required']
         ]);
     }
      
@@ -66,22 +68,28 @@ class RegisterController extends Controller
      * @return \App\User
      */
     protected function create(Request $request)
-    {
+     {
        // store the date come from register form in data base table (user)
         $user = new User;
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
         $user->email = $request->email;
+        $user->start_point = $request->start_point;
         $user->password = \Hash::make($request->password);
 
-        $user->save();
+       
 
         //if every thing is ok , will create session named user_id to use it  profile 
         if($user->save()){  
           session()->put('user_id',$user->id);
-           
-          return redirect()->route('information.profile');
+          $user = $user->find(session()->get('user_id'));
+
+           $fullname = $user->first_name .'.'.$user->last_name .'.'.$user->id;
+
+            return redirect()->route('information.profile',['name'=>$fullname]);
+       
         }// end if
+    
     
     }// create function 
 }

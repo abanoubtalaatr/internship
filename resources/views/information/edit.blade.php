@@ -1,5 +1,9 @@
 @extends('layouts.belong_user')
-
+@php 
+  use App\User;
+  $User = new User;
+  $CurrentUser = $User->CurrentUser();
+@endphp
 @section("title")
   profile/edit
 @stop {{-- title --}}
@@ -9,7 +13,7 @@
 @stop  {{-- style --}}
 
 @section('content')
-@if(!is_null($single_user))
+@if(!is_null($CurrentUser))
 <div class="edit">
 	<div class="container">
 		<h3 class="text-center">Edit Your Profile</h3>
@@ -22,7 +26,7 @@
             <div class="first_section col-md-6 float-left clearfix">
             	<div class="form-group">
                 <label>Frirst Name:</label>
-                <input type="text" name="first_name" class="form-control" placeholder="Frist  Name" value="{{$single_user->first_name}}">
+                <input type="text" name="first_name" class="form-control" placeholder="Frist  Name" value="{{$CurrentUser->first_name}}">
                 @if ($errors->has('first_name'))
                     <span class="text-danger">{{ $errors->first('first_name') }}</span>
                 @endif
@@ -30,7 +34,7 @@
 
             <div class="form-group">
                 <label>Last Name:</label>
-                <input type="text" name="last_name" class="form-control" placeholder="Last name" value="{{$single_user->last_name}}">
+                <input type="text" name="last_name" class="form-control" placeholder="Last name" value="{{$CurrentUser->last_name}}">
                 @if ($errors->has('Last_name'))
                     <span class="text-danger">{{ $errors->first('last_name') }}</span>
                 @endif
@@ -40,7 +44,7 @@
              <label>Career:</label>
 
                 <input type="text" name="career" class="form-control" placeholder="Your career like backend developer" 
-		                value="@if(is_null($single_user->career)){{ " "}}@else{{$single_user->career}}@endif">
+		                value="@if(is_null($CurrentUser->career)){{ " "}}@else{{$CurrentUser->career}}@endif">
 
                 @if ($errors->has('career'))
                     <span class="text-danger">{{ $errors->first('career') }}</span>
@@ -69,7 +73,7 @@
             <div class="form-group">
                 <label>Skills:</label>
                 <textarea name="skills" class="form-control" 
-                placeholder = " Write This format (html , css )">@if(is_null($single_user->skills)){{""}}@else{{$single_user->skills}}@endif</textarea> 
+                placeholder = " Write This format (html , css )">@if(is_null($CurrentUser->skills)){{""}}@else{{$CurrentUser->skills}}@endif</textarea> 
 
                 @if ($errors->has('skills'))
                     <span class="text-danger">{{ $errors->first('skills') }}</span>
@@ -82,7 +86,7 @@
             	<div class="form-group">
                 <label>Age:</label>
                 <input type="text" name="age" class="form-control" placeholder="Age" 
-                value="@if(is_null($single_user->age)){{""}}@else{{$single_user->age}}@endif">
+                value="@if(is_null($CurrentUser->age)){{""}}@else{{$CurrentUser->age}}@endif">
                 @if ($errors->has('age'))
                     <span class="text-danger">{{ $errors->first('age') }}</span>
                 @endif
@@ -91,7 +95,7 @@
             <div class="form-group">
                 <label>experience:</label>
                 <input type="text" name="experience" class="form-control" placeholder="Your experince like 1 month or more " 
-		                value="@if(is_null($single_user->experience)){{""}}@else{{$single_user->experience}}@endif">
+		                value="@if(is_null($CurrentUser->experience)){{""}}@else{{$CurrentUser->experience}}@endif">
                 @if ($errors->has('experience'))
                     <span class="text-danger">{{ $errors->first('experience') }}</span>
                 @endif
@@ -101,7 +105,7 @@
             <div class="form-group">
                 <label>Phone:</label>
                 <input type="text" name="phone" class="form-control" placeholder="Phone" 
-                value="@if(is_null($single_user->phone)){{ " "}}@else{{$single_user->phone}}@endif">
+                value="@if(is_null($CurrentUser->phone)){{ " "}}@else{{$CurrentUser->phone}}@endif">
                 @if ($errors->has('phone'))
                     <span class="text-danger">{{ $errors->first('phone') }}</span>
                 @endif
@@ -109,7 +113,7 @@
 
             <div class="form-group">
                 <label>Address</label>
-		        <input type="text" name="address" class="form-control" placeholder="Your Address" value="@if(is_null($single_user->address)){{""}}@else{{$single_user->address}}@endif">
+		        <input type="text" name="address" class="form-control" placeholder="Your Address" value="@if(is_null($CurrentUser->address)){{""}}@else{{$CurrentUser->address}}@endif">
                 @if ($errors->has('address'))
                     <span class="text-danger">{{ $errors->first('address') }}</span>
                 @endif
@@ -118,7 +122,7 @@
 
             <div class="form-group">
                 <label>Email:</label>
-                <input type="email" name="email" class="form-control" placeholder="Email" value="{{$single_user->email}}">
+                <input type="email" name="email" class="form-control" placeholder="Email" value="{{$CurrentUser->email}}">
                 @if ($errors->has('email'))
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                 @endif
@@ -126,7 +130,7 @@
 
              <div class="form-group">
                 <label>Social Media links:</label>
-                <textarea name="links_social_media" class="form-control" placeholder= "Write format like (facebook.com/abanoubtalaat ) , (instagram.com/abanoubtalaat ) ">@if(is_null($single_user->phone)){{""}}@else{{$single_user->links_social_media}}@endif</textarea> 
+                <textarea name="links_social_media" class="form-control" placeholder= "Write format like (facebook.com/abanoubtalaat ) , (instagram.com/abanoubtalaat ) ">@if(is_null($CurrentUser->phone)){{""}}@else{{$CurrentUser->links_social_media}}@endif</textarea> 
                 @if ($errors->has('links_social_media'))
                     <span class="text-danger">{{ $errors->first('links_social_media') }}</span>
                 @endif

@@ -53,6 +53,26 @@
                             </div>
                         </div>
 
+
+                        <div class="form-group row">
+                            <label for="select" class="col-md-4 col-form-label text-md-right">{{ __('Choose Time To Receive Tasks') }}</label>
+
+                            <div class="col-md-6" id='select'>
+                                <select class="form-control" name="start_point">
+                                    <option>Choose Time </option>
+                                    <option value="1">Start 1 PM  </option>
+                                    <option value="2">Start 6 PM </option>
+                                    <option value="3">Start 11 PM </option>
+                                </select>
+
+                                @error('start_point')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 

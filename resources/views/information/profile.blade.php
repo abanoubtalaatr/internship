@@ -1,6 +1,8 @@
-
-
-
+@php 
+  use App\User;
+  $User = new User;
+  $CurrentUser = $User->CurrentUser();
+@endphp
 @extends('layouts.belong_user')
 @section('title')
 profile
@@ -15,9 +17,9 @@ profile
     @endif
 
 @stop {{-- style section --}}
-@section('content')
+@if(!empty($CurrentUser))
 
- 
+@section('content')
 
 <div class="container custom_profile">
 	
@@ -26,10 +28,11 @@ profile
    	<div class="profile col-md-12">
 		 <div class="profile_image col-md-3 ">
 		 	<div class="image col-md-12">
-		 		<img src="{{asset("images\\")}}{{$single_user->image}}" class="img-fluid img-thumbnail rounded " id="real_image">
+		 		<img src="{{asset("images\\")}}{{$CurrentUser->image}}" class="img-fluid img-thumbnail rounded " id="real_image">
+		 		
 		 	</div>
 	    	<div class="editing_image col-md-12">
-    		 <form  action="{{ route('handle_image') }}" method="POST" enctype="multipart/form-data">
+    		 <form  action="{{ route('update') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="contain_file_btn col-md-12">
                 	
@@ -50,24 +53,24 @@ profile
 	     </div> {{-- End Profile Image --}}
      {{-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ --}}
      	 <div class="profile_info col-md-9 ">
-			<h3 class="name"> {{$single_user->first_name}}  {{$single_user->last_name}}	</h3>					
+			<h3 class="name"> {{$CurrentUser->first_name}}  {{$CurrentUser->last_name}}	</h3>					
 			<h4 class="career">
-				@if($single_user->career != NULL)
-					<label>Career</label><div class="alert alert-primary ">  {{$single_user->career}}</div>	
+				@if($CurrentUser->career != NULL)
+					<label>Career</label><div class="alert alert-primary ">  {{$CurrentUser->career}}</div>	
 				@else
 				   <div class="alert alert-warning" style="margin:0px">{{("Update Your Career")}} </div>
 			    @endif
 		     </h4>
 			<h4 class="city">
-				@if($single_user->address != NULL)
-					<label>Address</label><div class="alert alert-primary ">{{$single_user->address}}</div>
+				@if($CurrentUser->address != NULL)
+					<label>Address</label><div class="alert alert-primary ">{{$CurrentUser->address}}</div>
 				@else
 				   <div class="alert alert-warning" style="margin:0px"> {{("Update Your City")}} </div> 
 			    @endif
 			</h4>
 			<div class="skills">
 				@php 
-				  $skills = $single_user->skills;
+				  $skills = $CurrentUser->skills;
 				  if(is_null($skills)){
 				  	echo "<div class='alert alert-warning' style='margin:0px'> Add Your Skills </div>";    
 				  }
@@ -101,31 +104,31 @@ profile
 		    {{-- Start profile general --}}
 		 <div class="profile_general col-md-6">
 			<h4> 
-				@if($single_user->age != NULL)
-					<label>Age</label><div class="alert alert-primary "> {{$single_user->age}}</div>	
+				@if($CurrentUser->age != NULL)
+					<label>Age</label><div class="alert alert-primary "> {{$CurrentUser->age}}</div>	
 				@else
 				   <div class="alert alert-warning" style="margin:0px"> {{("Add Your Age")}}  </div>
 			    @endif
 			</h4>
 			<h4>
-				@if($single_user->experience != NULL)
+				@if($CurrentUser->experience != NULL)
 					<label>Experience</label>
-					<div class="alert alert-primary "> {{$single_user->experience}}</div>	
+					<div class="alert alert-primary "> {{$CurrentUser->experience}}</div>	
 				@else
 				   <div class="alert alert-warning" style="margin:0px"> {{("Add Your experience")}}  </div>
 			    @endif
 			</h4>
 			<h4>
-				@if($single_user->phone != NULL)
-					<label>Phone</label><div class="alert alert-primary "> {{$single_user->phone}}</div>
+				@if($CurrentUser->phone != NULL)
+					<label>Phone</label><div class="alert alert-primary "> {{$CurrentUser->phone}}</div>
 				@else
 				   <div class="alert alert-warning" style="margin:0px"> {{("Add Your Phone")}}</div>
 			    @endif
 
 			</h4>
 			<h4>
-				@if($single_user->email != NULL)
-				        <label>Email</label><div class="alert alert-primary "> {{$single_user->email}}</div>
+				@if($CurrentUser->email != NULL)
+				        <label>Email</label><div class="alert alert-primary "> {{$CurrentUser->email}}</div>
 					@else
 					   <div class="alert alert-warning" style="margin:0px"> {{("Add Your email")}} </div>
 				    @endif
@@ -136,7 +139,7 @@ profile
 		 <div class="profile_social col-md-6  ">
 					<h4>
 						@php 
-						  $links = $single_user->links_social_media;
+						  $links = $CurrentUser->links_social_media;
 						  if(is_null($links)){
 						  	echo "<div class='alert alert-warning' style='margin:0px'> Add Your  Social Media Links </div>";    
 						  }
@@ -162,13 +165,13 @@ profile
     margin: auto;padding-bottom: 20px;">
 	<div class="row">
 		
-			<button class="btn btn-primary" onclick="window.location.href = '/profile/edit'" > Edit Profile</button>
+			<a class="btn btn-primary" href="{{route('edit_profile')}}"> Edit Profile</a>
 		
 	</div>
 </div>
 
 @stop {{-- content section --}}
-
+@endif
 
 @section('javascript')
  <script type="text/javascript" src="{{asset('js/profile/profile.js')}}"></script>

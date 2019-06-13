@@ -26,8 +26,15 @@ class CreateUsersTable extends Migration
             $table->integer('age')->nullable();
             $table->string('skills')->nullable();
             $table->string('phone')->nullable();
+            $table->string('list_of_tasks')->nullable();
             $table->string('image')->default("avatar.jpg");
             $table->string('links_social_media')->nullable();
+            $table->integer('start_point')->default(1);
+            $table->string('teams')->nullable();
+            $table->string('projects')->nullable();
+            $table->string('last_project');
+            $table->integer('level');
+            $table->string('tasks_compelete');
             $table->rememberToken();
             $table->timestamps();
         });
