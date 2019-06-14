@@ -16,8 +16,12 @@ Route::get('/project',"tasks\TasksController@GetLastTask")->name('project');
 Route::get('/chat',"Message\MessageController@view")->name('chat');
 Route::post('/setMessage',"Message\MessageController@SendMessage")->name('setMessage');
 Route::get('/solution','solution\SolutionController@GetSolutionForTasks')->name('solution');
-Route::get("/opinion", 'opinion\OpinionController@view')->name('opinions');
 
+// tab feedback
+
+Route::get("/feedback", 'feedback\feedbacks@view')->name('feedback');
+Route::post("/setFeedBack", 'feedback\feedbacks@SetFeedBack')->name('SetFeedBack');
+//End FeedBack
 // this belong teamleader
 Route::get('/teamleaderProfile','teamleader\TeamLeaderController@viewProfile')->name('viewProfile');
 

@@ -27,19 +27,21 @@ Route::get('admin/tasks/single_edit/{id}','tasks\TaskController@single_edit')->n
 // this for compelte the editin of Task
 Route::post('admin/tasks/single','tasks\TaskController@compelete_edit')->name('compelete_edit');
 
-// //show page add project
-// Route::get('admin/tasks/add','tasks\TaskController@show_add')->name('add_task');
-// // store the new task
-// Route::post('admins/tasks/create','tasks\TaskController@create')->name('create_task');
-// // route show page show 
-// Route::get('admin/tasks/show','tasks\TaskController@show_show')->name('show_show');
-// // show page delete 
-// Route::get('admin/tasks/delete','tasks\TaskController@show_delete')->name('show_delete');
-// // to delete 
-// Route::get('admin/tasks/delete/{id}','tasks\TaskController@to_delete')->name('to_delete');
-// // to show edit page
-// Route::get('admin/tasks/edit','tasks\TaskController@show_edit')->name('show_edit');
-// // to edit single task 
-// Route::get('admin/tasks/single_edit/{id}','tasks\TaskController@single_edit')->name('single_edit');
-// // this for compelte the editin of Task
-// Route::post('admin/tasks/single','tasks\TaskController@compelete_edit')->name('compelete_edit');
+// //show page add projectc
+
+Route::get('admin/projects/add','projects\ProjectController@ShowAdd')->name('ShowAdd');
+Route::post('admin/projects/create','projects\ProjectController@CreateProject')->name('CreateProject');
+
+Route::get('admin/projects/show' ,'projects\ProjectController@ShowProject')->name('ShowProject');
+
+
+Route::get('admin/projects/edit','projects\ProjectController@ShowEdit')->name('ShowEdit');
+
+Route::get('admin/projects/single_edit/{id}','projects\ProjectController@ShowSingleEdit')->name('ShowSingleEdit');
+
+Route::post('admin/projects/SaveEdit','projects\ProjectController@SaveEdit')->name('SaveEdit');
+
+
+Route::get('admin/projects/delete','projects\ProjectController@ShowDelete')->name('ShowDelete');
+
+Route::get('admin/projects/delete/{id}','projects\ProjectController@DeleteProject')->name('DeleteProject');

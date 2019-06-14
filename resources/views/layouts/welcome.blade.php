@@ -121,12 +121,10 @@
         </div>
        
         <div class="animatedParent">
+          
+          <h4 class=" animated fadeInLeft">  @lang('welcome/welcome.second_step')</h4>
           <hr>
-          <h4 class=" animated fadeInLeft"> 1- @lang('welcome/welcome.first_step')</h4>
-          <hr>
-          <h4 class=" animated fadeInLeft"> 2- @lang('welcome/welcome.second_step')</h4>
-          <hr>
-          <h4 class=" animated fadeInLeft"> 3- @lang('welcome/welcome.third_step')</h4>
+         
         </div>
     </div>
 </div> {{-- container --}} 

@@ -37,7 +37,7 @@
 
             <a href="{{ route('information.profile',['name'=> $fullname])}}">profile</a>
           </li>
-          <li> <a href="{{route('opinions')}}">Opinions</a></li>
+          <li> <a href="{{route('feedback')}}">FeedBack</a></li>
 
       		<li> 
 

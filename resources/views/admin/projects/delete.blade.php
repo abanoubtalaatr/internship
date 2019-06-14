@@ -1,5 +1,8 @@
 @extends('admin.layouts.master')
-
+@php 
+ use App\Project;
+ $AllProject =Project::all();
+@endphp
 
 @section('content')
 		  <!-- Content Wrapper. Contains page content -->
@@ -16,7 +19,6 @@
       </ol>
     </section>
 
-    @if(session()->get('admin_delete_current_tasks') or !empty($current_tasks))
        
     <!-- Main content -->
     <section class="content">
@@ -37,26 +39,22 @@
                   <th>Title</th>
                   <th>Description</th>
                   <th>Period</th>
+                  <th>Programer</th>
                   <th>Control</th>
                 </tr>
                 </thead>
                 <tbody>
                  @php 
-                      $current = [];
-                     if(session()->get('admin_delete_current_tasks')){
-                     	$current = session()->get('admin_delete_current_tasks');
-                     
-                     }else{
-                     	$current = $current_tasks; 
-                     }
+                    
 
-                     	foreach ($current as $key => $value) {
+                     	foreach ($AllProject as $key => $value) {
 			                 echo "<tr>
 			                  <td>$value->id</td>
-			                  <td>$value->title</td>
+			                  <td>$value->name</td>
 			                  <td>$value->description</td>
 			                  <td>$value->period</td>
-			                  <td class='text-center'> <a href= '/admin/tasks/delete/$value->id' class='btn btn-danger'> Delete</a></td>
+                        <td>$value->number_of_programmers</td>
+			                  <td class='text-center'> <a href= '/admin/projects/delete/$value->id' class='btn btn-danger'> Delete</a></td>
 			                </tr>";
                  	   }
                  	
@@ -76,7 +74,7 @@
       <!-- /.row -->
     </section>
     <!-- /.content -->
-    @endif
+   
   </div>
   <!-- /.content-wrapper -->
 @endsection

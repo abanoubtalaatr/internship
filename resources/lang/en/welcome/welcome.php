@@ -4,7 +4,9 @@
  	'welcome' => "Welcome to online Internship from your home",
  	'log_in' => 'log in',
  	'register' => 'Register',
- 	'intro' => 'differnt companies need people have an experince in programing to save the time and money for this company , but how gain experince without work in companies , in this site we can solve this problem within ,first you will work individual to make some tasks , second you will move the next step from gain experince that within join to team work have different Experience in this field(php lanaguage) to make big projects ,you will deal with different type of project like social media project , Tickets booking etc from differnt type of project by this way can gain an Experience',
+ 	'intro' => 'Let’s face it, college doesn’t give you all skills that needed to get a real job in the field of computer science, you need to get more experience in field before start looking for a job.   
+    So if you ready to have this experience you will find it easily in our website. It is a simple web application that will help you to learn how to program with PHP, and become one of the pros in the field.  
+Just follow the steps we provide in it . " Give a man a fish to feed him for a day .. teach a man to fish to feed him for a lifetime "' ,
  	'title_intro' => 'What we offer',
 
   'title_type' => 'Type of Internship',
@@ -19,9 +21,8 @@
   
   'step_title' => "To join in this site ",
 
-  'first_step' => "Make an Account ",
 
-  'second_step' => "Make some tasks individual to prepare to the next step",
+  'second_step' => "It is a web software application that helps fresh graduated students that want to learn how to program with PHP, and become one of the pros in the field, once the user enters the website ,He registers ,confirm registration and log in to the website ,He would have a profile in it , receive tasks and problems to solve with PHP , then if he did good in those ,he would be able to join real teams to work with big projects, the website would contain a communication system to connect  team members with each other(CHAT), share code together, the system also will contain an automated subsystem to mark the code written to solve some problem and send to the user, rate code efficiency . Every user will have a profile that has all information about user like personal information, projects he worked in, his work rate. That information will be very usefully for any big software developing companies that needs a PHP developer. ",
 
   'third_step' => "After do some tasks you now can join to the team that will help you more to gain experince",
 

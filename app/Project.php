@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {	
 
-
+	 protected $fillable = [
+        'name','description','number_of_programmers','period'
+    ];
 	// this function return  the ids of Projects in the site 
     public function GetFirstProject(){
 
